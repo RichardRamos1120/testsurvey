@@ -1,0 +1,278 @@
+*, *::before,*::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; /*set the default font size to 10px*/
+}
+
+:root{
+    --bg-light:#FBF7F4;
+    --dark:#4B535A;
+    --hover-light:#aaaaaa;
+    --light-02:#8b8b8b;
+}
+
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color:var(--bg-light);
+    font-size: 1.6rem;
+}
+
+/*hide element*/
+.hide{
+    display: none !important;
+}
+.not-Hide{
+    display: flex !important;
+}
+
+/*header area*/
+.main-header{
+    background-color: var(--dark);
+    padding: 2rem 3rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+}
+.hamburger-menu__span{
+    width: 4.5rem;
+    height: .6rem;
+    background-color:var(--bg-light);
+    border-radius: 1rem;
+}
+
+.login-btn,.user_name{
+    color:var(--bg-light);
+    font-size: 2rem;
+    user-select: none;
+    font-weight: normal;
+}
+.login-btn{
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: var(--hover-light);
+    transition: all 200ms linear;
+}
+
+/*container*/
+.container{
+    width: 100vw;
+    height: calc(100vh - 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*darken entire site when the login-form is visible*/
+#darken{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+}
+
+
+/*login form*/
+.login-form{
+    background-color: var(--bg-light);
+    box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 0.33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    border-radius: 10px;
+    padding: 2rem ;
+    position: absolute;
+
+}
+
+
+.login-form h2{
+    color: var(--dark);
+}
+.login-form small{
+    color: var(--light-02);
+}
+
+.login-form__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.login-form__section__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: .2rem;
+
+}
+.login-form__section__div label{
+    color:var(--dark);
+    font-weight: bold;
+}
+.login-form__section__div input{
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    color:var(--dark);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--light-02);
+}
+#logo{
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+#sign-in{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--bg-light);
+    font-size: 2rem;
+    padding: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/*questions_field*/
+
+.questions_field{
+
+}
+
+.questions_field__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.questions_field__div h3{
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--dark);
+
+}
+.questions_field__div label{
+    line-height: 1em;
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+}
+.questions_field__div small{
+    font-size: 1.6rem;
+    color: var(--light-02);
+}
+
+.questions_field__div button{
+
+
+}
+
+.questions_field__div input{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 4rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--hover-light);
+    font-size: 2rem;
+    color: #4B535A;
+    background:transparent;
+}
+
+#startbtn{
+    border-radius: 1000rem;
+    padding: 1rem;
+    width: 50%;
+    font-size:2rem;
+    outline: none;
+    border: 1px solid #FFA000;
+    background-color: #FFA000;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+
+
+.questions_field__div .question{
+    line-height: 1em;
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+li{
+    list-style: none;
+}
+
+.questions_field__div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 3rem;
+    color: #2374E1;
+    margin-bottom: 2rem;
+}
+.questions_field__div ul li{
+    border: 1px solid #2374E1;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.next_btn{
+    margin-top: 2rem;
+    border: 1px solid #2374E1;
+    padding: 1rem 2rem;
+    border-radius: 100rem;
+    font-size: 2rem;
+    width: 50%;
+    cursor: pointer;
+    background-color: rgba(35, 116, 225, 0.52);
+
+}
+
+#question3{
+    width: 70% !important;
+}
+
+.toPdf{
+    visibility: hidden;
+}
